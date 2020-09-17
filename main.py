@@ -2,22 +2,22 @@ import random
 import re
 from typing import Optional
 
-from parse import parseTemplates, parseDefaults
+from parse import parse_templates, parse_defaults
 
-templates = parseTemplates("templates.txt")
-defaults = parseDefaults("defaults.txt")
-print(templates)
-print(defaults)
+templates = parse_templates("templates.txt")
+defaults = parse_defaults("defaults.txt")
+# print(templates)
+# print(defaults)
 
 
-def getDefaultAnswer() -> str:
+def get_default_answer() -> str:
     return random.choice(defaults)
 
 
-def getAnswer(query: str) -> Optional[str]:
+def get_answer(query: str) -> Optional[str]:
     for statements, answers in templates:
         for statement in statements:
-            result = re.search(statement, query)
+            result = re.search(statement.lower(), query.lower())
             if result:
                 groups = result.groups()
                 if groups:
@@ -27,15 +27,16 @@ def getAnswer(query: str) -> Optional[str]:
     return None
 
 
-print("Hello there :)")
-while True:
-    userInput = input()
-    if not userInput:
-        continue
-    if userInput == "bye":
-        print("Bye!")
-        break
-    answer = getAnswer(userInput)
-    if not answer:
-        answer = random.choice(defaults)
-    print(answer)
+if __name__ == '__main__':
+    print("Hello there :)")
+    while True:
+        userInput = input('> ')
+        if not userInput:
+            continue
+        if userInput.lower() == "bye":
+            print(get_answer('bye'))
+            break
+        answer = get_answer(userInput)
+        if not answer:
+            answer = random.choice(defaults)
+        print(answer)

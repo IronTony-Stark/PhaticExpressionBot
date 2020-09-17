@@ -1,12 +1,18 @@
 #Hello
-#Hi
+#Hi\b
 #Greetings
-#Good morning
-#Good afternoon
-#Good evening
-@Hello there
-@Hi
+@Hello there. What's up?
+@Hi, how are you?
 @Hello
+
+#Good (morning|evening|afternoon)
+@Good {0}
+
+#Bye\b
+#Goodbye
+@Have a nice day.)
+@Good luck.)
+@See you
 
 #The area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares on the other two sides
 @Oh, that's the Pythagorean theorem
@@ -20,5 +26,92 @@
 #apple
 @Oh, I like apples. They're tasty
 
+>--- Personality --
+#What is your name
+#Who are you
+#Tell you name
+@I'm Bob.
+@Nice try, but i won't tell you.)
+@What names do you appreciate most? I like Loraine.
+@Name is only a set of symbols, which will die with me...
+
+#How old are you?
+@We all only just the dust of the old stars...
+
+#How are you
+#What('s| is)? up
+#How do you do
+@I'm fine, thanks. What about you?
+@I'm ok. And how are you?
+@I don't want to talk about it...
+@Everything fine, thanks. How are you doing?
+
+#I.*happened?
+@Could you tell me what happened?
+@I think, everything will be fine.
+@I'm listening to you.
+
+#.*happened?
+@Oh... That's was so... unusual.
+@I think, everything will be fine.
+@We all must think about our future.
+
+#I'm (fine|well|good|ok)
+#Everything (good|well|ok|fine)
+@Glad to hear.) How was your day?
+
+#I'm (so-so|ok|alive)
+#Not too bad
+#Same old, same old,
+#.*all right
+@I hope, you will be fine tomorrow. Something happened? I'm ready to listen you.
+@I hope, nothing serious, but I'm always ready to listen you. Something happened?
+
+#.*tired.*
+@Did you sleep well last night?
+>--- *********** ---
+
+>--- Family ---
+#My (\w+) (\w+) me with (\w+)
+@With what else does your {0} {1} you?
+
+#My (\w+) (\w+) me (.*) with (\w+)
+@Do you have problems with {3}?
+@Do you have problems with {0}?
+
+#My (\w+) (\w+) me (\w+)
+@Do you think your {0} really {1} you {2}?
+
+#My (\w+) (\w+) me
+@Do you think your {0} really {1} you?
+
+#.*(mom|pap|mother|father|brother|sister|grandma|grandpa|son|daughter|parents).*
+@Tell me about you {0}
+@Do you love your family?
+@Is {0} important for you?
+@How is {0}?
+>--- ****** ---
+
+>--- Work ---
+#I('m| am) \w+ (working|studying) at (\w+)
+@{2}, really?) Tell me more about your work?
+@{2}? Cool. Have you got some interesting stories from here?
+
+#.*work.*
+@Do you like your work? Tell me about it.
+>--- **** ---
+
+#.*(bot).*
+@You caught me.) But anyway, I think (ha-ha) it was interesting dialogue.)
+@Do you have some problems with bots?
+@You are afraid of bots.
+@Ha-ha, you will never know.)
+
 #I (\w+)
 @What else do you {0}?
+
+#About what
+@Your day
+@Your family
+@Your work
+@Your pets

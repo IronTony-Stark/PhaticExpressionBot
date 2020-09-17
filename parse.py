@@ -3,7 +3,7 @@ from typing import List, Tuple
 from exceptions import NoStatementsException, NoAnswersException
 
 
-def parseTemplates(file: str) -> List[Tuple[List[str], List[str]]]:
+def parse_templates(file: str) -> List[Tuple[List[str], List[str]]]:
     question_answers = []
 
     with open(file, "r") as f:
@@ -34,7 +34,7 @@ def parseTemplates(file: str) -> List[Tuple[List[str], List[str]]]:
     return question_answers
 
 
-def parseDefaults(file: str) -> List[str]:
+def parse_defaults(file: str) -> List[str]:
     defaults = []
 
     with open(file, "r") as f:
