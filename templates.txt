@@ -1,19 +1,14 @@
-!The area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares on the other two
- sides
-|Oh, that's the Pythagorean theorem
-|You seem to like math a lot
-|That formula was so complicated for me when I was a child
+The area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares on the other two sides
+@Oh, that's the Pythagorean theorem
+@You seem to like math a lot
+@That formula was so complicated for me when I was a child
 
-@* play *
-|What else do you play?
-|Oh, wow. Btw I like playing football
+play
+@What else do you play?
+@Oh, wow. Btw I like playing football
 
-@? apple
-|Oh, I like apples. They're tasty
+apple
+@Oh, I like apples. They're tasty
 
-#I <a> *
-|What else do you <a>?
-
-$I'm afraid I don't understand you
-$Sorry, but I don't get you
-$Looks like we are not on the same page. Could you explain everything again?
+I <a>
+@What else do you <a>?
