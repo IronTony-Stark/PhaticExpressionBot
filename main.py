@@ -17,8 +17,13 @@ def getDefaultAnswer() -> str:
 def getAnswer(query: str) -> Optional[str]:
     for statements, answers in templates:
         for statement in statements:
-            if re.search(statement, query):
-                return random.choice(answers)
+            result = re.search(statement, query)
+            if result:
+                groups = result.groups()
+                if groups:
+                    return random.choice(answers).format(*groups)
+                else:
+                    return random.choice(answers)
     return None
 
 

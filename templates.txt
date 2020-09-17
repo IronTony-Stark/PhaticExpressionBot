@@ -20,5 +20,5 @@
 #apple
 @Oh, I like apples. They're tasty
 
-#I <a>
-@What else do you <a>?
+#I (\w+)
+@What else do you {0}?
