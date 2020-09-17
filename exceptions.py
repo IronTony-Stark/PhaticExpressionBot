@@ -1,4 +1,4 @@
-class NoQuestionException(Exception):
+class NoStatementsException(Exception):
     pass
 
 

@@ -1,14 +1,24 @@
-The area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares on the other two sides
+#Hello
+#Hi
+#Greetings
+#Good morning
+#Good afternoon
+#Good evening
+@Hello there
+@Hi
+@Hello
+
+#The area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares on the other two sides
 @Oh, that's the Pythagorean theorem
 @You seem to like math a lot
 @That formula was so complicated for me when I was a child
 
-play
+#play
 @What else do you play?
 @Oh, wow. Btw I like playing football
 
-apple
+#apple
 @Oh, I like apples. They're tasty
 
-I <a>
+#I <a>
 @What else do you <a>?

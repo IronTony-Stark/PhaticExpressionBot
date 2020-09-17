@@ -14,10 +14,11 @@ def getDefaultAnswer() -> str:
     return random.choice(defaults)
 
 
-def getAnswer(statement: str) -> Optional[str]:
-    for template, answers in templates.items():
-        if re.search(template, statement):
-            return random.choice(answers)
+def getAnswer(query: str) -> Optional[str]:
+    for statements, answers in templates:
+        for statement in statements:
+            if re.search(statement, query):
+                return random.choice(answers)
     return None
 
 

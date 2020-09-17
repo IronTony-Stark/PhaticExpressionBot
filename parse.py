@@ -1,36 +1,35 @@
-from typing import Dict, List
+from typing import List, Tuple
 
-from exceptions import NoQuestionException, NoAnswersException
+from exceptions import NoStatementsException, NoAnswersException
 
 
-def parseTemplates(file: str) -> Dict[str, List[str]]:
-    question_answers = {}
+def parseTemplates(file: str) -> List[Tuple[List[str], List[str]]]:
+    question_answers = []
 
     with open(file, "r") as f:
-        statement = ""
+        statements = []
         answers = []
 
         for line in f:
             line = line.strip()
             if line:
-                if line[0] == "@":
-                    if statement:
+                if line[0] == "#":
+                    if answers:
+                        question_answers.append((statements, answers))
+                        statements = [line[1:]]
+                        answers = []
+                    else:
+                        statements.append(line[1:])
+                elif line[0] == "@":
+                    if statements:
                         answers.append(line[1:])
                     else:
-                        raise NoQuestionException()
-                elif not statement:
-                    statement = line
-                elif not answers:
-                    raise NoAnswersException()
-                else:
-                    question_answers[statement] = answers
-                    statement = line
-                    answers = []
+                        raise NoStatementsException()
 
-        if statement and not answers:
+        if statements and not answers:
             raise NoAnswersException()
         else:
-            question_answers[statement] = answers
+            question_answers.append((statements, answers))
 
     return question_answers
 
