@@ -8,9 +8,11 @@ priority_templates = parse_templates("templates.txt")
 templates_used: Dict[int, List[Tuple[List[str], Dict[str, int]]]] = \
     {k: [(statements, {answer: 0 for answer in answers}) for statements, answers in v] for k, v in
      priority_templates.items()}
+del priority_templates
 
 defaults = parse_defaults("defaults.txt")
 defaults_used: Dict[int, Dict[str, int]] = {k: {default: 0 for default in v} for k, v in defaults.items()}
+del defaults
 
 
 def get_min_used_replies(possible_replies: Dict[str, int]) -> List[str]:
@@ -40,7 +42,7 @@ def get_default_answer() -> str:
 
 
 def get_answer(query: str) -> Optional[str]:
-    for priority, templates in priority_templates.items():
+    for priority, templates in templates_used.items():
         for i, (statements, answers) in enumerate(templates):
             for statement in statements:
                 result = re.search(statement.lower(), query.lower())

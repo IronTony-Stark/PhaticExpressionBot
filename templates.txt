@@ -107,7 +107,7 @@
 @You are afraid of bots.
 @Ha-ha, you will never know.)
 
-~4#I (\w+)
+#I (\w+)
 @What else do you {0}?
 
 ~1#About what
@@ -115,3 +115,12 @@
 @Your family
 @Your work
 @Your pets
+
+~1#Yes|No
+@Ok, I've got it.
+@Hm...
+@I've noticed it
+@Interesting
+
+#You[are' ]* stupid|fool|idiot
+@Maybe, but you still chatting with me, yes?) Btw, do you know at least my name to write things like this? Oh, you are so uncultured. I didn't expect that from you.
