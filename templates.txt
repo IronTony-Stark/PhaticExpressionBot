@@ -56,11 +56,11 @@
 @I think, everything will be fine.
 @We all must think about our future.
 
-#I'm (fine|well|good|ok)
+#I('m| am) (fine|well|good|ok)
 #Everything (good|well|ok|fine)
 @Glad to hear.) How was your day?
 
-#I'm (so-so|ok|alive)
+#I('m| am) (so-so|ok|alive)
 #Not too bad
 #Same old, same old,
 #.*all right
