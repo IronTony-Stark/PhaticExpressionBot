@@ -3,7 +3,7 @@
 #Greetings
 @Hello there. What's up?
 @Hi, how are you?
-@Hello
+@Hello! How do you feel?
 
 #Good (morning|evening|afternoon)
 @Good {0}
@@ -107,10 +107,10 @@
 @You are afraid of bots.
 @Ha-ha, you will never know.)
 
-#I (\w+)
+~4#I (\w+)
 @What else do you {0}?
 
-#About what
+~1#About what
 @Your day
 @Your family
 @Your work
