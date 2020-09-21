@@ -45,3 +45,4 @@ Default answers also have priority and are also being counted. Firstly, answers 
 priority number) will be used. Once all of them were used once, bot will start to use answers with the second
 highest priority etc 
  
+![](demo.png)
